@@ -26,9 +26,11 @@ HTTP 状态码分布: 针对 HTTP 压测，提供详细的状态码统计。
 克隆仓库 (如果适用):
 
 Bash
+```
+git clone https://github.com/sshfortress/rust_ab_websocket# 替换为你的仓库地址
+cd rust_ab_websocket
+```
 
-git clone https://github.com/sshfortress/ab # 替换为你的仓库地址
-cd ab
 或者如果你是手动创建项目，请确保你的项目结构如下：
 
 rust_ab_websocket/
@@ -39,7 +41,7 @@ rust_ab_websocket/
 确保你的 Cargo.toml 文件包含以下依赖项：
 
 Ini, TOML
-
+```
 # Cargo.toml
 [package]
 name = "rust_ab_websocket"
@@ -56,12 +58,16 @@ futures-util = "0.3"
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 hdrhistogram = "7.5"
+```
+
 构建:
 在项目根目录运行以下命令来编译优化后的二进制文件：
 
 Bash
-
+```
 cargo build --release
+```
+
 编译成功后，可执行文件将位于 target/release/rust_ab_websocket (Windows 上是 target/release/rust_ab_websocket.exe)。
 
 🚀 使用方式
