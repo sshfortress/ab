@@ -46,7 +46,7 @@ Ini, TOML
 [package]
 name = "rust_ab_websocket"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
