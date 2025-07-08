@@ -101,18 +101,25 @@ Bash
 Bash
 
 ./target/release/rust_ab_websocket -c 10 -r 1000 -u "http://httpbin.org/get" -m GET
+
+
 2. HTTP POST 请求 (带 JSON 数据和自定义 Header)
 对 http://httpbin.org/post 发送 500 个 POST 请求，并发数为 5，并发送 JSON 数据和自定义 Header。
 
 Bash
 
 ./target/release/rust_ab_websocket -c 5 -r 500 -u "http://httpbin.org/post" -m POST -d '{"username": "rust_user", "score": 99}' -H "Content-Type: application/json" -H "X-API-Key: abcdef123"
+
+
 3. HTTP DELETE 请求
 对 http://localhost:8080/resource/123 发送 10 个 DELETE 请求，并发数为 2。
 
 Bash
 
 ./target/release/rust_ab_websocket -c 2 -r 10 -u "http://localhost:8080/resource/123" -m DELETE
+
+
+
 4. WebSocket 连接 (发送一条消息)
 建立 100 个 WebSocket 连接，并发数为 2，每个连接发送一次 "Hello WebSocket!" 消息。
 
@@ -127,6 +134,8 @@ echo.websocket.events 是一个公共的 WebSocket 回显服务器，用于测�
 Bash
 
 ./target/release/rust_ab_websocket -c 5 -u "ws://echo.websocket.events" -m WS --ws-duration 10
+
+
 报告解读
 工具运行结束后会输出详细的压测报告：
 
