@@ -1,0 +1,15 @@
+[package]
+name = "rust_ab_websocket"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] } # 异步运行时
+reqwest = { version = "0.12", features = ["json", "blocking", "multipart"] } # HTTP 客户端
+tokio-tungstenite = { version = "0.23", features = ["native-tls"] } # WebSocket 客户端
+url = "2.5" # URL 处理
+clap = { version = "4", features = ["derive"] } # 命令行参数解析
+futures-util = "0.3" # 异步流处理 (仅 SinkExt)
+serde_json = "1.0" # JSON 处理
+serde = { version = "1.0", features = ["derive"] } # 序列化/反序列化
+hdrhistogram = "7.5" # 用于统计延迟百分位数
